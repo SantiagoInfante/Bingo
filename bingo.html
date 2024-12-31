@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="descripcion" content="Una pagina web donde puedes jugar bingo con tus familiares o amigos.">
+    <meta name="keywords" content="bingo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Santiago Infante">
+    <link rel="shortcut icon" href="bingoicon.png">
+
+    <link rel="stylesheet" href="styles.css">
+    <title>Bingo</title>
+</head>
+<body> 
+
+<section id="configuracion">
+
+<h1 id="menutitulo">Bingo</h1>
+<div class="centrar">
+<button onclick="seleccion()" id="btnjugar">Jugar</button>
+</div>
+</section>
+
+<section id="seleccionrol">
+
+<h1 id="seleccionrol">Selecciona tu rol</h1>
+
+<button id="jugador" onclick="jugar()">Jugador</button>
+<button  id="bingueroboton"  onclick="binguero()">Binguero</button>
+</section>
+
+
+<section id="bingueroseccion">
+
+
+<div class="columnas" style="display: flex;">
+    <div id="lab"  class="binguero-pirata">B</div>
+
+                <div class="binguero">01</div>
+                <div class="binguero">02</div>
+                <div class="binguero">03</div>
+                <div class="binguero">04</div>
+                <div class="binguero">05</div>
+                <div class="binguero">06</div>
+                <div class="binguero">07</div>
+                <div class="binguero">08</div>
+                <div class="binguero">09</div>
+                <div class="binguero">10</div>
+                <div id="once" class="binguero">11</div>
+                <div class="binguero">12</div>
+                <div class="binguero">13</div>
+                <div class="binguero">14</div>
+                <div class="binguero">15</div>
+
+</div>
+
+<div class="columnas" style="display: flex;">
+    <div  id="lai"  class="binguero-pirata">I</div>
+
+                <div class="binguero">16</div>
+                <div class="binguero">17</div>
+                <div class="binguero">18</div>
+                <div class="binguero">19</div>
+                <div class="binguero">20</div>
+                <div class="binguero">21</div>
+                <div class="binguero">22</div>
+                <div class="binguero">23</div>
+                <div class="binguero">24</div>
+                <div class="binguero">25</div>
+                <div class="binguero">26</div>
+                <div class="binguero">27</div>
+                <div class="binguero">28</div>
+                <div class="binguero">29</div>
+                <div class="binguero">30</div>
+</div>
+
+
+<div class="columnas" style="display: flex;">
+    <div  class="binguero-pirata">N</div>
+
+        <div class="binguero">31</div> 
+        <div class="binguero">32</div>
+        <div class="binguero">33</div>
+        <div class="binguero">34</div>
+        <div class="binguero">35</div>
+        <div class="binguero">36</div>
+        <div class="binguero">37</div>
+        <div class="binguero">38</div>
+        <div class="binguero">39</div>
+        <div class="binguero">40</div>
+        <div class="binguero">41</div>
+        <div class="binguero">42</div>
+        <div class="binguero">43</div>
+        <div class="binguero">44</div>
+        <div class="binguero">45</div>
+</div>
+          
+<div class="columnas" style="display: flex;">
+    <div id="lag"  class="binguero-pirata">G</div>
+
+                <div class="binguero">46</div> 
+                <div class="binguero">47</div>
+                <div class="binguero">48</div>
+                <div class="binguero">49</div>
+                <div class="binguero">50</div>
+                <div class="binguero">51</div>
+                <div class="binguero">52</div>
+                <div class="binguero">53</div>
+                <div class="binguero">54</div>
+                <div class="binguero">55</div>
+                <div class="binguero">56</div>
+                <div class="binguero">57</div>
+                <div class="binguero">58</div>
+                <div class="binguero">59</div>
+                <div class="binguero">60</div>
+    </div>
+
+<div class="columnas" style="display: flex;">
+    <div id="lao"  class="binguero-pirata">O</div>
+
+         <div class="binguero">61</div>
+         <div class="binguero">62</div>         
+         <div class="binguero">63</div>         
+         <div class="binguero">64</div>         
+        <div class="binguero">65</div>
+        <div class="binguero">66</div>
+        <div class="binguero">67</div>
+        <div class="binguero">68</div>
+        <div class="binguero">69</div>
+        <div class="binguero">70</div>
+        <div class="binguero">71</div>
+        <div class="binguero">72</div>
+        <div class="binguero">73</div>
+        <div class="binguero">74</div>
+        <div class="binguero">75</div>
+
+</div>
+<div id="botonesbinguerodiv">
+    <button class="botonesbinguero"  id="nuevo-numero"  onclick="numeronuevo()">Nuevo Número</button>
+    <button class="botonesbinguero"id="numeros-salidos"  onclick="numerosalidos()">Números Salidos</button>
+     <button class="botonesbinguero" id="generar-juego" onclick="generarjuego()">Generar juego</button>
+</div>
+<h1 id="resultado">---</h1>
+
+</section>
+
+<section id="jugando">
+    <h1 id="Pregunta">¿Quieres quedarte con este carton?</h1>
+    <div id="botonescartones">
+    <button id="Noquedarse" onclick="nuevocarton()">No</button>
+    <button id="Siquedarse" onclick="quedarsecarton()">Sí</button>
+    </div>       
+
+
+
+        <div class="grid-container">
+            <div  class="grid-pirata">B</div>
+            <div  class="grid-pirata">I</div>
+            <div  class="grid-pirata">N</div>
+            <div  class="grid-pirata">G</div>
+            <div  class="grid-pirata">O</div>
+            <div  class="grid-item" id="num1">1</div>
+            <div  class="grid-item" id="num2">2</div>
+            <div  class="grid-item" id="num3">3</div>
+            <div  class="grid-item" id="num4">4</div>
+            <div  class="grid-item" id="num5">5</div>
+            <div  class="grid-item" id="num6">6</div>
+            <div  class="grid-item" id="num7">7</div>
+            <div  class="grid-item" id="num8">8</div>
+            <div  class="grid-item" id="num9">9</div>
+            <div  class="grid-item" id="num10">10</div>
+            <div  class="grid-item" id="num11">11</div>
+            <div  class="grid-item" id="num12">12</div>
+            <div  class="grid-item" id="num13">★</div>
+            <div  class="grid-item" id="num14">14</div>
+            <div  class="grid-item" id="num15">15</div>
+            <div  class="grid-item" id="num16">16</div>
+            <div  class="grid-item" id="num17">17</div>
+            <div  class="grid-item" id="num18">18</div>
+            <div  class="grid-item" id="num19">19</div>
+            <div  class="grid-item" id="num20">20</div>
+            <div  class="grid-item" id="num21">21</div>
+            <div  class="grid-item" id="num22">22</div>
+            <div  class="grid-item" id="num23">23</div>
+            <div  class="grid-item" id="num24">24</div>
+            <div  class="grid-item" id="num25">25</div>
+        </div>
+        <div id="centraresto">
+            <button id="bingoganaste" onclick="ganador()">BINGO</button>
+</section>
+
+<script src="scripts.js"></script>
+</body>
+</html>
